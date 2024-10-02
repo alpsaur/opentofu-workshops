@@ -1,30 +1,30 @@
- git checkout
-  937  git status
-  938  git branch
-  939  git add .
-  940  git status
-  941  git commit -m "Add Workshop 06-resources"
-  942  git push -u origin 06-workshop
-  943  git checkout main
-  944  git merge 06-workshop
-  
-  945  git checkout main
-  946  git branch
-  947  cd ..
-  948  git branch
-  949  git merge 06-workshop
-  950  git push origin main
-  951  git branch -d 06-workshop
-  952  git checkout branch -d 07-workshop
-  953  git checkout -b 07-workshopcle
-  
-  957  git branch
-  958  git add .
-  959  git commit -m "Add Workshop 07 - 18"
-  960  git push origin 07-workshop
-  961  git checkout main
-  962  git pull origin main
-  963  git branch 
-  964  git branch 07-workshop
-  965  git checkout 07-workshop
-  966  clear
+# Switch to the stage branch
+git checkout stage
+
+# Check the status and stage changes
+git status
+git add .
+
+# Commit the changes
+git commit -m "Describe the changes you made"
+
+# Push the changes to the remote stage branch
+git push origin stage
+
+# Switch to the main branch
+git checkout main
+
+# Pull the latest changes from the remote main branch
+git pull origin main
+
+# Merge the stage branch into main
+git merge stage
+
+# Push the updated main branch to the remote
+git push origin main
+
+# Optional: Delete the local stage branch
+git branch -d stage
+
+# Optional: Delete the remote stage branch
+git push origin --delete stage
