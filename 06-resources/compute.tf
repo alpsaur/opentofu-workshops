@@ -1,6 +1,6 @@
 resource "aws_instance" "web" {
-  # AMI ID NGINX  = ami-0dfee6e7eb44d480b
-  # AMI ID Ubuntu = ami-0652a081025ec9fee
+# AMI locator https://cloud-images.ubuntu.com/locator/ec2/
+# An AMI ID is a unique identifier for an Amazon Machine Image (AMI) that is available to creare EC2 instances.
   ami                         = "ami-03fa85deedfcac80b"
   associate_public_ip_address = true
   instance_type               = "t2.micro"
