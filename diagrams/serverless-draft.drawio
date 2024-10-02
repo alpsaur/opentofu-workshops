@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.5">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.5" pages="5">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="2585" dy="1385" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -298,6 +298,392 @@
         </mxCell>
         <mxCell id="7OVz4w7n9kzEPWy-4BBC-23" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1221.5" y="1131" width="449" height="115" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="c2_b6aw4kHHX2ECN4X9y" name="docker-based">
+    <mxGraphModel dx="1122" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BP86aMWb46LXMaDsUUhz-1" value="Client" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="373" y="160" width="58" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-2" value="API Gateway" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="349" y="262" width="106" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-3" value="Application Load Balancer" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="364" width="203" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-4" value="ECS Cluster" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="466" width="97" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-5" value="EC2 Instances/Fargate" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="568" width="176" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-6" value="ECR" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="553" y="364" width="43" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-7" value="DynamoDB/RDS" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="425" y="670" width="126" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-8" value="HTTP Request" style="curved=1;startArrow=none;endArrow=block;exitX=0.14;exitY=0.99;entryX=0.3;entryY=0;rounded=0;" edge="1" parent="1" source="BP86aMWb46LXMaDsUUhz-1" target="BP86aMWb46LXMaDsUUhz-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="228" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-9" value="Forward Request" style="curved=1;startArrow=none;endArrow=block;exitX=0.28;exitY=0.99;entryX=0.39;entryY=0;rounded=0;" edge="1" parent="1" source="BP86aMWb46LXMaDsUUhz-2" target="BP86aMWb46LXMaDsUUhz-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="332" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-10" value="Route Traffic" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.2;entryY=0;rounded=0;" edge="1" parent="1" source="BP86aMWb46LXMaDsUUhz-3" target="BP86aMWb46LXMaDsUUhz-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="402" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-11" value="Run Containers" style="curved=1;startArrow=none;endArrow=block;exitX=0.49;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="BP86aMWb46LXMaDsUUhz-4" target="BP86aMWb46LXMaDsUUhz-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-12" value="Pull Image" style="curved=1;startArrow=none;endArrow=block;exitX=0.49;exitY=0.99;entryX=0.79;entryY=0;rounded=0;" edge="1" parent="1" source="BP86aMWb46LXMaDsUUhz-6" target="BP86aMWb46LXMaDsUUhz-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="574" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-13" value="Read/Write" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="BP86aMWb46LXMaDsUUhz-5" target="BP86aMWb46LXMaDsUUhz-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-14" value="Return Response" style="curved=1;startArrow=none;endArrow=block;exitX=0.61;exitY=0;entryX=0.71;entryY=0.99;rounded=0;" edge="1" parent="1" source="BP86aMWb46LXMaDsUUhz-3" target="BP86aMWb46LXMaDsUUhz-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="471" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-15" value="HTTP Response" style="curved=1;startArrow=none;endArrow=block;exitX=0.69;exitY=0;entryX=0.84;entryY=0.99;rounded=0;" edge="1" parent="1" source="BP86aMWb46LXMaDsUUhz-2" target="BP86aMWb46LXMaDsUUhz-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="463" y="228" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BP86aMWb46LXMaDsUUhz-16" value="&lt;h3 style=&quot;box-sizing: border-box; border-width: 0px; border-style: solid; border-color: hsl(var(--border-100)); border-image: initial; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: hsl(var(--accent-secondary-100)/1); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; outline-color: hsl(var(--accent-main-100)); font-size: 0.875rem; margin: 0px; overflow: hidden; text-wrap: nowrap; text-overflow: ellipsis; padding-left: 0.25rem; font-family: var(--font-tiempos),ui-serif,Georgia,Cambria,&amp;quot;Times New Roman&amp;quot;,Times,serif; line-height: 1.25rem; --tw-text-opacity: 1; color: rgb(41, 38, 27); letter-spacing: -0.4px; text-align: start; background-color: rgb(248, 248, 247);&quot; class=&quot;text-text-100 font-tiempos truncate pl-1 text-sm&quot;&gt;&lt;u&gt;Docker-based Approach Diagram&lt;/u&gt;&lt;/h3&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="311" y="100" width="181" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="xf_cXFuFbpxxh0X6jfto" name="lambda-based">
+    <mxGraphModel dx="2213" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-1" value="Client" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-518" y="290" width="58" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-2" value="API Gateway" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-541" y="392" width="106" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-3" value="Lambda Function" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-485" y="494" width="138" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-4" value="S3 Bucket" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-386" y="392" width="85" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-5" value="DynamoDB/RDS" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-479" y="596" width="126" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-6" value="HTTP Request" style="curved=1;startArrow=none;endArrow=block;exitX=0.16;exitY=0.99;entryX=0.3;entryY=0;rounded=0;" edge="1" parent="1" source="z9h7nvZSWNf4ttrRcIyF-1" target="z9h7nvZSWNf4ttrRcIyF-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-550" y="358" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-7" value="Trigger" style="curved=1;startArrow=none;endArrow=block;exitX=0.49;exitY=0.99;entryX=0.33;entryY=0;rounded=0;" edge="1" parent="1" source="z9h7nvZSWNf4ttrRcIyF-2" target="z9h7nvZSWNf4ttrRcIyF-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-489" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-8" value="Store ZIP" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.67;entryY=0;rounded=0;" edge="1" parent="1" source="z9h7nvZSWNf4ttrRcIyF-4" target="z9h7nvZSWNf4ttrRcIyF-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-343" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-9" value="Read/Write" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="z9h7nvZSWNf4ttrRcIyF-3" target="z9h7nvZSWNf4ttrRcIyF-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z9h7nvZSWNf4ttrRcIyF-10" value="HTTP Response" style="curved=1;startArrow=none;endArrow=block;exitX=0.69;exitY=0;entryX=0.86;entryY=0.99;rounded=0;" edge="1" parent="1" source="z9h7nvZSWNf4ttrRcIyF-2" target="z9h7nvZSWNf4ttrRcIyF-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-427" y="358" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1EPckM7yu1MlgDiY1mo5-1" value="&lt;b&gt;&lt;u&gt;Lambda-based Approach Diagram&lt;/u&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-613" y="190" width="260" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="26jVsKmkuac__oLHztp7" name="lambda-docker-based">
+    <mxGraphModel dx="2213" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-2" value="Client" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-340" y="329" width="58" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-3" value="API Gateway" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-363" y="431" width="106" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-4" value="Lambda Service" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-323" y="533" width="128" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-5" value="ECR" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="431" width="43" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-6" value="Lambda Container Runtime" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-364" y="635" width="210" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-7" value="DynamoDB/RDS" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-322" y="737" width="126" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-8" value="HTTP Request" style="curved=1;startArrow=none;endArrow=block;exitX=0.16;exitY=0.99;entryX=0.3;entryY=0;rounded=0;" edge="1" parent="1" source="9ghfEsz9j9PmfKLz80zD-2" target="9ghfEsz9j9PmfKLz80zD-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-372" y="397" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-9" value="Trigger" style="curved=1;startArrow=none;endArrow=block;exitX=0.33;exitY=0.99;entryX=0.24;entryY=0;rounded=0;" edge="1" parent="1" source="9ghfEsz9j9PmfKLz80zD-3" target="9ghfEsz9j9PmfKLz80zD-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-362" y="499" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-10" value="Pull Image" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.81;entryY=0;rounded=0;" edge="1" parent="1" source="9ghfEsz9j9PmfKLz80zD-5" target="9ghfEsz9j9PmfKLz80zD-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-139" y="499" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-11" value="Execute Function" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="9ghfEsz9j9PmfKLz80zD-4" target="9ghfEsz9j9PmfKLz80zD-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-12" value="Read/Write" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="9ghfEsz9j9PmfKLz80zD-6" target="9ghfEsz9j9PmfKLz80zD-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-13" value="Return Response" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=0.65;entryY=0.99;rounded=0;" edge="1" parent="1" source="9ghfEsz9j9PmfKLz80zD-4" target="9ghfEsz9j9PmfKLz80zD-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-259" y="499" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-14" value="HTTP Response" style="curved=1;startArrow=none;endArrow=block;exitX=0.69;exitY=0;entryX=0.86;entryY=0.99;rounded=0;" edge="1" parent="1" source="9ghfEsz9j9PmfKLz80zD-3" target="9ghfEsz9j9PmfKLz80zD-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-249" y="397" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ghfEsz9j9PmfKLz80zD-15" value="&lt;b&gt;&lt;u&gt;Lambda-docker-based Approach&lt;/u&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-440" y="220" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xmr0FsYkJQar29AQHcIX-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;Lambda with Docker:&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ol depth=&quot;0&quot; class=&quot;-mt-1 list-decimal space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Lambda Container Support:&lt;br&gt;&lt;ul depth=&quot;1&quot; class=&quot;-mt-1 list-disc space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;AWS introduced Docker container support for Lambda in December 2020.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Allows you to deploy Lambda functions as container images up to 10GB in size.&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;How it works:&lt;br&gt;&lt;ul depth=&quot;1&quot; class=&quot;-mt-1 list-disc space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Package Lambda function code and dependencies as a Docker container image.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;The container image is stored in Amazon Elastic Container Registry (ECR).&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Lambda can execute functions from these container images.&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Benefits:&lt;br&gt;&lt;ul depth=&quot;1&quot; class=&quot;-mt-1 list-disc space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Larger deployment package size (up to 10GB vs 250MB for zip files).&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;More control over the runtime environment.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Ability to use custom runtimes more easily.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;&lt;b&gt;Consistency between local development and cloud execution environments.&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-830" y="20" width="390" height="688" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="MO6twhhZaJchFNYuVR3n" name="docker-s3/ecr">
+    <mxGraphModel dx="1193" dy="698" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-1" value="Docker Build" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="478" y="328" width="105" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-2" value="Storage Choice" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="453" y="430" width="155" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-3" value="Elastic Container Registry" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="312" y="654" width="199" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-4" value="Simple Storage Service" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="561" y="654" width="178" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-5" value="ECS/EKS/Lambda" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="342" y="756" width="139" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-6" value="Custom Deployment Process" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="542" y="756" width="216" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-7" value="Application" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="482" y="858" width="97" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-8" value="Push Image" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="EpPdqME3AX64z2tE2Kjt-1" target="EpPdqME3AX64z2tE2Kjt-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-9" value="ECR" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.97;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="EpPdqME3AX64z2tE2Kjt-2" target="EpPdqME3AX64z2tE2Kjt-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="411" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-10" value="S3" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.97;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="EpPdqME3AX64z2tE2Kjt-2" target="EpPdqME3AX64z2tE2Kjt-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-11" value="Pull Image" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.98;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="EpPdqME3AX64z2tE2Kjt-3" target="EpPdqME3AX64z2tE2Kjt-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-12" value="Custom Pull Process" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.98;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="EpPdqME3AX64z2tE2Kjt-4" target="EpPdqME3AX64z2tE2Kjt-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-13" value="Deploy" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.98;entryX=0.1;entryY=0;rounded=0;" edge="1" parent="1" source="EpPdqME3AX64z2tE2Kjt-5" target="EpPdqME3AX64z2tE2Kjt-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="411" y="824" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-14" value="Deploy" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.98;entryX=0.9;entryY=0;rounded=0;" edge="1" parent="1" source="EpPdqME3AX64z2tE2Kjt-6" target="EpPdqME3AX64z2tE2Kjt-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="824" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EpPdqME3AX64z2tE2Kjt-16" value="&lt;b&gt;&lt;u&gt;docker s3 or ecr&lt;/u&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="415.5" y="250" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-1" value="Incoming Request" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1200" width="141" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-2" value="Execution Type" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="563" y="1284" width="156" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-3" value="Lambda Service" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="457" y="1610" width="128" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-4" value="ECS" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="741" y="1508" width="41" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-5" value="Lambda Execution Environment" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1712" width="241" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-6" value="EC2/Fargate" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="709" y="1610" width="104" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-7" value="Docker Container" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="691" y="1712" width="139" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-8" value="Function Code" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="462" y="1814" width="118" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-9" value="Application Code" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="692" y="1814" width="137" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-10" value="Response" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="601" y="1898" width="80" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-11" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-1" target="gtoaIhzBS3mS9o4jH_XR-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-12" value="Lambda" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.97;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-2" target="gtoaIhzBS3mS9o4jH_XR-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="521" y="1474" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-13" value="Docker" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.97;entryX=0.49;entryY=0.01;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-2" target="gtoaIhzBS3mS9o4jH_XR-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="761" y="1474" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-14" value="Instantiate" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-3" target="gtoaIhzBS3mS9o4jH_XR-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-15" value="Schedule" style="curved=1;startArrow=none;endArrow=block;exitX=0.49;exitY=0.99;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-4" target="gtoaIhzBS3mS9o4jH_XR-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-16" value="Run" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-6" target="gtoaIhzBS3mS9o4jH_XR-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-17" value="Execute" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-5" target="gtoaIhzBS3mS9o4jH_XR-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-18" value="Execute" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-7" target="gtoaIhzBS3mS9o4jH_XR-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-19" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0;entryY=0.07;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-8" target="gtoaIhzBS3mS9o4jH_XR-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="521" y="1873" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-20" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=1;entryY=0.07;rounded=0;" edge="1" parent="1" source="gtoaIhzBS3mS9o4jH_XR-9" target="gtoaIhzBS3mS9o4jH_XR-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="761" y="1873" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gtoaIhzBS3mS9o4jH_XR-21" value="&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Lambda Function Execution:&lt;br&gt;&lt;ul depth=&quot;1&quot; class=&quot;-mt-1 list-disc space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Serverless Model: Lambda is a fully managed serverless compute service. You don&#39;t need to provision or manage any servers.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Execution Environment: When a Lambda function is invoked, AWS instantiates a container with your function code and any necessary runtime.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Cold Starts: The first invocation (or after a period of inactivity) might experience a &quot;cold start&quot; as the container is prepared.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Scaling: AWS automatically scales the number of execution environments based on the number of incoming requests.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Resource Allocation: You specify memory allocation (128MB to 10GB), and CPU is allocated proportionally.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Execution Duration: Limited to a maximum of 15 minutes per invocation.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Statelessness: Each invocation runs in a fresh environment. Any state must be stored externally (e.g., in S3 or DynamoDB).&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Docker Container Execution (on ECS with EC2 or Fargate):&lt;br&gt;&lt;ul depth=&quot;1&quot; class=&quot;-mt-1 list-disc space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Container Orchestration: ECS manages the deployment, scheduling, and scaling of your Docker containers.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;EC2 Launch Type:&lt;br&gt;&lt;ul depth=&quot;2&quot; class=&quot;-mt-1 list-disc space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;You manage a cluster of EC2 instances where containers run.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;ECS handles placement of containers on these instances.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;You&#39;re responsible for scaling and maintaining the EC2 instances.&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Fargate Launch Type:&lt;br&gt;&lt;ul depth=&quot;2&quot; class=&quot;-mt-1 list-disc space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Serverless option where AWS manages the underlying infrastructure.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;You don&#39;t need to provision or manage EC2 instances.&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Long-Running Processes: Containers can run indefinitely, unlike Lambda&#39;s 15-minute limit.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Resource Allocation: You specify CPU and memory requirements for your containers.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Scaling:&lt;br&gt;&lt;ul depth=&quot;2&quot; class=&quot;-mt-1 list-disc space-y-2 pl-8&quot;&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;EC2: You manage instance scaling, ECS manages container scaling.&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;Fargate: AWS handles scaling of both infrastructure and containers.&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li class=&quot;whitespace-normal break-words&quot;&gt;State: Containers can maintain state between requests, but it&#39;s generally advisable to design for statelessness.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1120" width="430" height="1050" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
