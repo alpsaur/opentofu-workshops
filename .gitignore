@@ -50,3 +50,6 @@ terraform-provider-*
 
 # Ignore Terraform/OpenTofu directories
 **/.terraform/*
+
+# gitnotes
+.gitnotes

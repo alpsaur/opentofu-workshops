@@ -1,0 +1,30 @@
+ git checkout
+  937  git status
+  938  git branch
+  939  git add .
+  940  git status
+  941  git commit -m "Add Workshop 06-resources"
+  942  git push -u origin 06-workshop
+  943  git checkout main
+  944  git merge 06-workshop
+  
+  945  git checkout main
+  946  git branch
+  947  cd ..
+  948  git branch
+  949  git merge 06-workshop
+  950  git push origin main
+  951  git branch -d 06-workshop
+  952  git checkout branch -d 07-workshop
+  953  git checkout -b 07-workshopcle
+  
+  957  git branch
+  958  git add .
+  959  git commit -m "Add Workshop 07 - 18"
+  960  git push origin 07-workshop
+  961  git checkout main
+  962  git pull origin main
+  963  git branch 
+  964  git branch 07-workshop
+  965  git checkout 07-workshop
+  966  clear
